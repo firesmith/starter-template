@@ -68,8 +68,11 @@ module.exports = {
     '@nuxtjs/axios',
     ['@nuxtjs/pwa', { onesignal: false, workbox: false }]
   ],
+  plugins: [
+    '@/plugins/vuetify'
+  ],
   vendor: [
-    '~/plugins/vuetify.js'
+    '@/plugins/vuetify'
   ]
 }
 
