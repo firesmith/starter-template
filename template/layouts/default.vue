@@ -1,53 +1,68 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <v-app>
+    <app-drawer />
+    <app-toolbar />
+    <!-- <v-toolbar
+      :clipped-left="clipped"
+      app
+    >
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"/>
+      <v-btn
+        icon
+        @click.stop="miniVariant = !miniVariant">
+        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"/>
+      </v-btn>
+      <v-btn
+        icon
+        @click.stop="clipped = !clipped">
+        <v-icon>web</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        @click.stop="fixed = !fixed">
+        <v-icon>remove</v-icon>
+      </v-btn>
+      <v-toolbar-title v-text="title"/>
+      <v-spacer/>
+      <v-btn
+        icon
+        @click.stop="rightDrawer = !rightDrawer">
+        <v-icon>menu</v-icon>
+      </v-btn>
+    </v-toolbar> -->
+    <v-content>
+      <nuxt />
+    </v-content>
+    <app-drawer-right />
+  </v-app>
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import AppDrawer from '@/components/AppDrawer'
+import AppDrawerRight from '@/components/AppDrawerRight'
+import AppToolbar from '@/components/AppToolbar'
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    AppDrawer,
+    AppDrawerRight,
+    AppToolbar
+  },
+  middleware: 'routeWatcher',
+  data () {
+    return {
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [{
+        icon: 'bubble_chart',
+        title: 'Inspire'
+      }],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js'
+    }
+  }
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
-
+</script>

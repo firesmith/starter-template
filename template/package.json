@@ -5,22 +5,44 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "build:analyze": "cross-env ANALYZE=true nuxt build",
+    "dev": "nuxt",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "run": "nuxt run",
+    "start": "nuxt start",
+    "tidy": "yarn lint --fix"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/pwa": "^2.0.8",
+    "@nuxtjs/vuetify": "^0.4.2",
+    "babel-polyfill": "^6.26.0",
+    "material-design-icons-iconfont": "3.0.3",
+    "nuxt": "^1.4.1",
+    "vuetify": "^1.1.7"
   },
   "devDependencies": {
+    "@babel/preset-env": "latest",
     "babel-eslint": "^8.2.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
+    "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   }
 }
 
