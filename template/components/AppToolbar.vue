@@ -12,7 +12,7 @@
         @click.stop="setDrawerNav(true)" />
       <v-toolbar-title
         class="t-cap hidden-xs-only">
-        {{ toolbarTitle }}
+        \{{ toolbarTitle }}
       </v-toolbar-title>
       <v-spacer />
       <v-btn
@@ -44,18 +44,3 @@ export default {
   methods: mapMutations('app', [SET_DRAWER_NAV, SET_DRAWER_RIGHT])
 }
 </script>
-
-<style>
-#cudoToolbar {
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform .3s cubic-bezier(.4,0,.2,1) .3s,opacity 0s .3s;
-}
-#cudoToolbar .project-select {
-  text-transform: none;
-}
-.cudo-toolbar-menu {
-  max-width: 90%;
-  top: 4px !important;
-}
-</style>

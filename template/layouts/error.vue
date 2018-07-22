@@ -3,10 +3,10 @@
     <v-layout column fill-height justify-center align-center>
       <v-card>
         <v-card-title>
-          <v-flex class="display-3 text-xs-center">{{ error.statusCode }}</v-flex>
+          <v-flex class="display-3 text-xs-center">\{{ error.statusCode }}</v-flex>
         </v-card-title>
         <v-card-text>
-          {{ error.message }}
+          \{{ error.message }}
         </v-card-text>
         <v-card-actions>
           <v-btn to="/">home</v-btn>

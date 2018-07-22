@@ -9,7 +9,7 @@
     </v-layout>
     <v-layout class="pt-3">
       <v-flex>
-        <span>{{ error.message }}</span>
+        <span>\{{ error.message }}</span>
       </v-flex>
     </v-layout>
 

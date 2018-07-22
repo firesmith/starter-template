@@ -32,11 +32,11 @@
           avatar
         >
           <v-list-tile-action>
-            <v-icon>{{ nav.icon }}</v-icon>
+            <v-icon>\{{ nav.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
-              {{ nav.label }}
+              \{{ nav.label }}
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
