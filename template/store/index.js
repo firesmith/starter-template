@@ -1,7 +1,5 @@
-import groups from '../core/api'
-
-export const actions = {
-  fetchGroups () {
-    return groups()
-  }
+const defaultState = {
+  auth: null
 }
+
+export const state = () => defaultState
