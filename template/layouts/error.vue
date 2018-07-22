@@ -1,6 +1,10 @@
 <template>
   <v-container fill-height>
-    <v-layout column fill-height justify-center align-center>
+    <v-layout
+      align-center
+      column
+      fill-height
+      justify-center>
       <v-card>
         <v-card-title>
           <v-flex class="display-3 text-xs-center">\{{ error.statusCode }}</v-flex>

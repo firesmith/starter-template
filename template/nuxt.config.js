@@ -1,30 +1,36 @@
 const nodeExternals = require('webpack-node-externals')
-const resolve = (dir) => require('path').join(__dirname, dir)
+const resolve = dir => require('path').join(__dirname, dir)
 
 module.exports = {
-
   /*
   ** Build configuration
   */
   build: {
     analyze: process.env.ANALYZE,
     babel: {
-      'presets': [
-        ["env", {
-          "targets": {
-            "browsers": ["last 2 versions", "safari >= 9"]
+      presets: [
+        [
+          'env',
+          {
+            targets: {
+              browsers: ['last 2 versions', 'safari >= 9']
+            }
           }
-        }],
+        ],
         'stage-2',
         'vue'
       ],
       plugins: [
-        ["transform-imports", {
-          "vuetify": {
-            "transform": "vuetify/es5/components/${member}",
-            "preventFullImport": true
+        [
+          'transform-imports',
+          {
+            vuetify: {
+              transform: 'vuetify/es5/components/${member}',
+              preventFullImport: true
+            }
           }
-        }]
+        ],
+        'transform-runtime'
       ]
     },
     devtool: 'source-map',
@@ -54,19 +60,12 @@ module.exports = {
   /*
   ** Headers of the page
   */
- head: {
-    title: '{{ name }}',
+  head: {
+    title: 'file_bind',
     meta: [
       { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: '{{escape description }}' }
-    {{#fontSystem}}
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ]
-    {{else}}
-    ],
-    link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' }
-    ]
-    {{/fontSystem}}
   },
   /*
   ** Customize the progress bar color
@@ -76,11 +75,6 @@ module.exports = {
     '@nuxtjs/axios',
     ['@nuxtjs/pwa', { onesignal: false, workbox: false }]
   ],
-  plugins: [
-    '@/plugins/vuetify'
-  ],
-  vendor: [
-    '@/plugins/vuetify'
-  ]
+  plugins: ['@/plugins/vuetify'],
+  vendor: ['@/plugins/vuetify']
 }
-
