@@ -1,10 +1,10 @@
 const nodeExternals = require('webpack-node-externals')
-const resolve = dir => require('path').join(__dirname, dir)
+const resolve = (dir) => require('path').join(__dirname, dir)
 
 module.exports = {
   /*
-  ** Build configuration
-  */
+    ** Build configuration
+    */
   build: {
     analyze: process.env.ANALYZE,
     babel: {
@@ -60,12 +60,19 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  head: {
-    title: 'file_bind',
+ head: {
+    title: '{{ name }}',
     meta: [
       { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: '{{escape description }}' }
+    {{#fontSystem}}
     ]
+    {{else}}
+    ],
+    link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' }
+    ]
+    {{/fontSystem}}
   },
   /*
   ** Customize the progress bar color
@@ -75,6 +82,11 @@ module.exports = {
     '@nuxtjs/axios',
     ['@nuxtjs/pwa', { onesignal: false, workbox: false }]
   ],
-  plugins: ['@/plugins/vuetify'],
-  vendor: ['@/plugins/vuetify']
+  plugins: [
+    '@/plugins/vuetify'
+  ],
+  vendor: [
+    '@/plugins/vuetify'
+  ]
 }
+
