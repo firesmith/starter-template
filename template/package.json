@@ -20,15 +20,14 @@
     "@nuxtjs/pwa": "^2.0.8",
     "babel-polyfill": "^6.26.0",
     "material-design-icons-iconfont": "3.0.3",
-    "nuxt": "^1.4.1",
+    "nuxt": "latest",
     "vuetify": "^1.1.7"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-imports": "^1.5.0",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-preset-vue": "^2.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^4.15.0",

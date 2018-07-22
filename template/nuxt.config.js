@@ -10,8 +10,12 @@ module.exports = {
     analyze: process.env.ANALYZE,
     babel: {
       'presets': [
-        '@babel/preset-env',
-        'stage-0',
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions", "safari >= 9"]
+          }
+        }],
+        'stage-2',
         'vue'
       ],
       plugins: [

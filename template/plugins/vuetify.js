@@ -33,8 +33,7 @@ import {
   transitions
 } from 'vuetify'
 
-import '../node_modules/vuetify/src/stylus/app.styl'
-import './assets/scss/theme.scss'
+import './styles/main.styl'
 
 const components = {
   VApp,
