@@ -6,18 +6,30 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## Edit your theme
 
+[Vuetify theme generator](https://vuetifyjs.com/en/theme-generator)
+
+## Docs
+
+For references on how things work, checkout:
+[Vue API](https://vuejs.org/v2/api/)
+[Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+[Vuetify API explorer](https://vuetifyjs.com/en/components/api-explorer)
+
+## Resources
+[Material icons](https://material.io/tools/icons/)
+[SVG optimizer](https://jakearchibald.github.io/svgomg/)
