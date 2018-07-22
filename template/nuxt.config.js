@@ -60,9 +60,12 @@ module.exports = {
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: '{{escape description }}' }
     ],
+    {{#fontSystem}}
+    {{else}}
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' }
     ]
+    {{/fontSystem}}
   },
   /*
   ** Customize the progress bar color
